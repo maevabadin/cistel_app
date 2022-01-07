@@ -1,0 +1,143 @@
+﻿<Page x:Class="cistel_elec_ge.DevisFacturesDark"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cistel_elec_ge"
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1600"
+      Title="DevisFacturesDark">
+
+    <Grid>
+        <Grid Background="#FF355E8A" RenderTransformOrigin="0.518,0.486">
+            <TextBox HorizontalAlignment="Left" Height="42" Margin="700,49,0,0" TextWrapping="Wrap" Text="Devis/Facture" VerticalAlignment="Top" Width="323" TextAlignment="Center" FontSize="20" Background="#FFF0F9FF" Foreground="#FF0E0D0D"/>
+            <Button Content="Aperçu" HorizontalAlignment="Left" Margin="1200,285,0,0" VerticalAlignment="Top" Width="128" Height="35" Background="#FFF0F9FF" Foreground="#FF151515"/>
+            <Button Content="Imprimer" HorizontalAlignment="Left" Margin="1200,354,0,0" VerticalAlignment="Top" Width="128" Height="35" Background="#FFF0F9FF" Foreground="#FF111111"/>
+            <Button Content="Envoyé par mail" HorizontalAlignment="Left" Margin="1200,413,0,0" VerticalAlignment="Top" Width="128" Height="35" Background="#FFF0F9FF" Foreground="#FF131313"/>
+            <Button Content="Traduire en facture" HorizontalAlignment="Left" Margin="1200,489,0,0" VerticalAlignment="Top" Width="128" Height="35" Background="#FFF0F9FF" Foreground="#FF151515"/>
+            <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="1200,560,0,0" VerticalAlignment="Top" Width="128" Height="35" Background="#FFF0F9FF" Foreground="#FF1B1B1B"/>
+            <TextBox HorizontalAlignment="Left" Height="49" Margin="86,271,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="526" FontSize="16"/>
+            <TextBox 
+            x:Name="searchBarText"
+            HorizontalAlignment="Left" 
+            Margin="1093,211,0,0" 
+            TextWrapping="Wrap" 
+            Text="Recherche" 
+            VerticalAlignment="Top" 
+            Width="347" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20" RenderTransformOrigin="0.591,0.5"/>
+            <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="86,355,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="526" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+            <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="86,436,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="526" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+            <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="86,512,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="526" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+            <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="86,605,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="526" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+            <CheckBox Content="Devis" HorizontalAlignment="Left" Margin="116,176,0,0" VerticalAlignment="Top" Height="33" Width="109" FontSize="16"/>
+            <CheckBox Content="Facture" HorizontalAlignment="Left" Margin="266,176,0,0" VerticalAlignment="Top" Height="33" Width="101" FontSize="16"/>
+            <Button Content="Plus" HorizontalAlignment="Left" Margin="86,702,0,0" VerticalAlignment="Top" Width="75" Background="#FFF0F9FF" Foreground="#FF292828"/>
+            <TextBox 
+            x:Name="clients"
+            HorizontalAlignment="Left" 
+            Margin="407,166,0,0" 
+            TextWrapping="Wrap" 
+            Text="clients" 
+            VerticalAlignment="Top" 
+            Width="99" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20" RenderTransformOrigin="0.717,0.382" />
+            <TextBlock HorizontalAlignment="Left" Margin="700,269,0,0" TextWrapping="Wrap" Text="€" VerticalAlignment="Top" Height="44" Width="100" FontSize="36" TextAlignment="Center" Foreground="#FF0A0A0A"/>
+            <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="668,354,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="162" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+            <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="668,436,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="162" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+            <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="668,512,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="162" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+            <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="668,605,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="162" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+
+
+
+        </Grid>
+    </Grid>
+</Page>

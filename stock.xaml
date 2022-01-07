@@ -1,0 +1,197 @@
+﻿<Page x:Class="cistel_elec_ge.stock"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cistel_elec_ge"
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1600"
+      Title="stock" Background="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+    <Grid Background="#FFF0F9FF">
+        <TextBlock 
+            FontSize="36" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Margin="0,30,0,0" 
+            Foreground="Black">Stock</TextBlock>
+        <!--Search Bar-->
+        <TextBox 
+            x:Name="searchBarText"
+            HorizontalAlignment="Left" 
+            Margin="39,37,0,0" 
+            TextWrapping="Wrap" 
+            Text="Recherche" 
+            VerticalAlignment="Top" 
+            Width="347" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+        <Button 
+            x:Name="searchBarButton"
+            Content="Q" 
+            HorizontalAlignment="Left" 
+            Margin="405,34,0,0" 
+            VerticalAlignment="Top" 
+            Width="40" Height="40" 
+            FontSize="20" 
+            Background="#FFF0F9FF" 
+            BorderBrush="{x:Null}"
+            BorderThickness="2"/>
+        <!--Affichage du Stock-->
+        <DataGrid 
+            x:Name="stockDatagrid"
+            Background="#FFA4BAD2"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            Height="500" 
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Center"
+            MinRowHeight="40"
+            CanUserResizeColumns="False"
+            CanUserResizeRows="False"
+            CanUserAddRows="True"
+            CanUserDeleteRows="True"
+            FontSize="20" BorderBrush="{x:Null}" Margin="0,100,0,0">
+            <!--Style des headers de colonnes-->
+            <DataGrid.Resources>
+                <Style 
+                    BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" 
+                    TargetType="{x:Type DataGridColumnHeader}" >
+                    <Setter Property="Background" Value="#FF355E8A" />
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="Height" Value="40" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Style>
+            </DataGrid.Resources>
+            <!--Contenu des colonnes-->
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Header="Description" 
+                    Binding="{Binding Description}" 
+                    IsReadOnly="True"
+                    Width="960"
+                    />
+                <DataGridTextColumn 
+                    Header="Prix" 
+                    Binding="{Binding Prix}" 
+                    IsReadOnly="True" 
+                    Width="120"
+                    />
+                <DataGridTextColumn 
+                    Header="Quantité" 
+                    Binding="{Binding Quantite}" 
+                    IsReadOnly="True" 
+                    Width="120"
+                    />
+                <DataGridTextColumn 
+                    Header="Qté Min" 
+                    Binding="{Binding QteMin}" 
+                    IsReadOnly="True" 
+                    Width="120"
+                    />
+                <!--Si Quantité < Qté Min affiché "Stock Faible" sinon "ok"-->
+                <DataGridTextColumn 
+                    Header="Etat" 
+                    Binding="{Binding Etat}" 
+                    IsReadOnly="True" 
+                    Width="120"
+                    />
+                <!--Bouton Modifier le champ-->
+                <DataGridTemplateColumn Width="50" Header="V">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button 
+                                Width="50" 
+                                HorizontalAlignment="Left"
+                                Background="{x:Null}" 
+                                BorderBrush="{x:Null}" 
+                                Foreground="#FF355E8A">V</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--Bouton Supprimer le champ-->
+                <DataGridTemplateColumn Width="50" Header="X">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button 
+                                Width="50" 
+                                HorizontalAlignment="Left" 
+                                Background="{x:Null}" 
+                                BorderBrush="{x:Null}" 
+                                Foreground="#FF355E8A">X</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <!--Formulaire d'ajout-->
+        <TextBox 
+            x:Name="descriptionAddInput"
+            HorizontalAlignment="Left" 
+            Margin="30,640,0,0" 
+            TextWrapping="Wrap" 
+            Text="Description" 
+            VerticalAlignment="Top" 
+            Width="770" Height="32" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+        <TextBox 
+            x:Name="priceAddInput"
+            HorizontalAlignment="Left" 
+            Margin="840,640,0,0" 
+            TextWrapping="Wrap" 
+            Text="Prix" 
+            VerticalAlignment="Top" 
+            Width="200" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+        <TextBox 
+            x:Name="quantityAddInput"
+            HorizontalAlignment="Left" 
+            Margin="1110,640,0,0" 
+            TextWrapping="Wrap" 
+            Text="Quantité" 
+            VerticalAlignment="Top" 
+            Width="200" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+        <TextBox 
+            x:Name="minQuantityAddInput"
+            HorizontalAlignment="Left" 
+            Margin="1370,640,0,0" 
+            TextWrapping="Wrap" 
+            Text="Quantité Minimale" 
+            VerticalAlignment="Top" 
+            Width="200" Height="34" 
+            Background="{x:Null}" 
+            SelectionBrush="{x:Null}" 
+            BorderBrush="Black" 
+            BorderThickness="0,0,0,2"
+            FontSize="20"/>
+        <Button 
+            x:Name="addItemButton"
+            Content="Ajouter" 
+            HorizontalAlignment="Center" 
+            Margin="0,700,0,0" 
+            VerticalAlignment="Top" 
+            Width="118" Height="40" 
+            FontSize="20" 
+            Background="#FFF0F9FF" 
+            BorderBrush="#FF355E8A"
+            BorderThickness="2"/>
+    </Grid>
+</Page>

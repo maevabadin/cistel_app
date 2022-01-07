@@ -1,0 +1,17 @@
+﻿<Window x:Class="cistel_elec_ge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cistel_elec_ge"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Background="#FFF0F9FF">
+    <Grid>
+        <Image Height="254" Margin="472,79,470,0" VerticalAlignment="Top" Source="cistel-logo.png"/>
+        <Button Content="Connexion" x:Name="Connexion" Height="62" Margin="846,489,470,0" VerticalAlignment="Top" Foreground="#e7efed" Background="#355e8a" Click="Connexion_Click" />
+        <Button Content="Inscription" x:Name="Inscription" HorizontalAlignment="Left" Height="62" Margin="472,489,0,0" VerticalAlignment="Top" Width="276" Foreground="#e7efed" Background="#355e8a" Click="Inscription_Click"/>
+        <Button Content="Dark" x:Name="Dark" HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="132" Foreground="#e7efed" Background="#355e8a" Click="Dark_Click" />
+
+
+    </Grid>
+</Window>

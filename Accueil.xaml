@@ -1,0 +1,29 @@
+﻿<Window x:Class="cistel_elec_ge.Accueil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cistel_elec_ge"
+        mc:Ignorable="d"
+        Title="Accueil" Height="900" Width="1600" Background="#FFF0F9FF" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Image Height="238" Margin="500,80,0,0" VerticalAlignment="Top" Width="600" Source="cistel-logo.png" HorizontalAlignment="Left"/>
+        <StackPanel Margin="81,390,87,377" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Rectangle Fill="#FF355E8A" HorizontalAlignment="Left" Height="104" Stroke="Black" VerticalAlignment="Top" Width="400"/>
+            <Rectangle Fill="#FF355E8A" HorizontalAlignment="Left" Height="104" Stroke="Black" VerticalAlignment="Top" Width="400"/>
+            <Rectangle Fill="#FF355E8A" HorizontalAlignment="Left" Height="104" Stroke="Black" VerticalAlignment="Top" Width="400"/>
+
+        </StackPanel>
+        <Label Content="Devis/factures" HorizontalAlignment="Left" Height="36" Margin="330,424,0,0" VerticalAlignment="Top" Width="135" FontSize="20" BorderThickness="0,0,0,2" RenderTransformOrigin="0.446,-0.257" Foreground="White"/>
+        <Label Content="Stock et rendez-vous" HorizontalAlignment="Left" Height="36" Margin="707,424,0,0" VerticalAlignment="Top" Width="196" FontSize="20" BorderThickness="0,0,0,2" RenderTransformOrigin="0.446,-0.257" Foreground="White"/>
+        <Label Content="Clients" HorizontalAlignment="Left" Height="36" Margin="1158,424,0,0" VerticalAlignment="Top" Width="72" FontSize="20" BorderThickness="0,0,0,2" RenderTransformOrigin="0.446,-0.257" Foreground="White"/>
+        <Button Content="Rédiger un devis/facture" x:Name="RédigerDevis" HorizontalAlignment="Left" Height="57" Margin="278,524,0,0" VerticalAlignment="Top" Width="232" Background="#FF355E84" Foreground="#FFFDFDFD" Click="RédigerDevis_Click" />
+        <Button Content="Liste des  devis/facture" x:Name="ListeDevis" HorizontalAlignment="Left" Height="57" Margin="278,623,0,0" VerticalAlignment="Top" Width="232" Background="#FF355E84" Foreground="#FFFDFDFD" Click="ListeDevis_Click" />
+        <Button Content="Ajouter un client" x:Name="AjoutClient" HorizontalAlignment="Left" Height="57" Margin="1073,524,0,0" VerticalAlignment="Top" Width="232" Background="#FF355E84" Foreground="#FFFDFDFD" Click="AjoutClient_Click" />
+        <Button Content="Liste des clients" x:Name="ListeClients" HorizontalAlignment="Left" Height="57" Margin="1073,623,0,0" VerticalAlignment="Top" Width="232" Background="#FF355E84" Foreground="#FFFDFDFD" Click="ListeClients_Click" />
+        <Button Content="Voir le stock" x:Name="Stock" HorizontalAlignment="Left" Height="57" Margin="671,524,0,0" VerticalAlignment="Top" Width="232" Background="#FF355E84" Foreground="#FFFDFDFD" Click="Stock_Click" />
+        <Button Content="dark" x:Name="Dark" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="232" Background="#FF355E84" Foreground="#FFFDFDFD" Click="Dark_Click" />
+        <Button Content="Rendez-vous" x:Name="Rendezvous" HorizontalAlignment="Left" Height="57" Margin="671,623,0,0" VerticalAlignment="Top" Width="232" Background="#FF355E84" Foreground="#FFFDFDFD" Click="Rendezvous_Click" />
+
+    </Grid>
+</Window>

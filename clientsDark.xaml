@@ -1,0 +1,146 @@
+﻿<Page x:Class="cistel_elec_ge.clientsDark"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cistel_elec_ge"
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1600"
+      Title="clientsDark">
+    <Grid>
+        <!-- Couleur de fond -->
+        <Rectangle 
+            Fill="#355E8A" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Height="840"
+            Width="1600"
+            />
+        <!-- Recherche d'un client -->
+        <Label 
+            Content="Mes clients"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Height="60" 
+            Width="160"
+            Margin="0,60,0,0" 
+            Foreground="#F0F9FF" 
+            FontFamily="Segoe UI" 
+            FontSize="30"
+            />
+        <Rectangle 
+            Fill="#F0F9FF"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Height="30" 
+            Width="90"
+            Margin="400,161,0,0"
+            />
+        <Label 
+            Content="Client :" 
+            Name="clientLabel" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Height="30" 
+            Width="90" 
+            Margin="400,161,0,0"
+            FontFamily="Segoe UI"
+            FontSize="15"
+            Foreground="#355E8A"
+            />
+        <TextBox 
+            Name="searchBox" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Height="30" 
+            Width="620" 
+            Margin="495,161,0,0"
+            FontFamily="Segoe UI"
+            FontSize="15"
+            />
+        <Button             
+            Background="#F0F9FF"
+            Content="Recherche"
+            Name="searchButton" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Height="30" 
+            Width="80" 
+            Margin="1120,160,0,0"
+            FontFamily="Segoe UI"
+            FontSize="15"
+            Foreground="#355E8A"
+            
+            />
+        <!-- Tableau d'affichage des clients -->
+        <DataGrid 
+            x:Name="clientsDatagrid"
+            Background="#FFFFFF"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top" 
+            Margin="0,250,0,0"
+            Height="500"
+            Width="1400"
+            MinRowHeight="40"
+            CanUserResizeColumns="False"
+            CanUserResizeRows="False"
+            CanUserAddRows="True"
+            CanUserDeleteRows="True"
+            FontSize="20" 
+            BorderBrush="{x:Null}" 
+            >
+            <!--Contenu des colonnes-->
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Header="N° client" 
+                    Binding="{Binding client_number}" 
+                    IsReadOnly="True" 
+                    Width="100"
+                    />
+                <DataGridTextColumn 
+                    Header="Nom" 
+                    Binding="{Binding lastname}" 
+                    IsReadOnly="True"
+                    Width="150"
+                    />
+                <DataGridTextColumn 
+                    Header="Prénom" 
+                    Binding="{Binding firstname}" 
+                    IsReadOnly="True" 
+                    Width="150"
+                    />
+                <DataGridTextColumn 
+                    Header="Adresse" 
+                    Binding="{Binding address}" 
+                    IsReadOnly="True" 
+                    Width="200"
+                    />
+                <DataGridTextColumn 
+                    Header="CP" 
+                    Binding="{Binding zip_code}" 
+                    IsReadOnly="True" 
+                    Width="100"
+                    />
+                <DataGridTextColumn 
+                    Header="Ville" 
+                    Binding="{Binding city}" 
+                    IsReadOnly="True" 
+                    Width="150"
+                    />
+                <DataGridTextColumn 
+                    Header="Téléphone" 
+                    Binding="{Binding telephone_number}" 
+                    IsReadOnly="True" 
+                    Width="150"
+                    />
+                <DataGridTextColumn 
+                    Header="Email" 
+                    Binding="{Binding email}" 
+                    IsReadOnly="True" 
+                    Width="200"
+                    />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

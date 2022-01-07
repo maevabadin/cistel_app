@@ -1,0 +1,64 @@
+﻿<Page x:Class="cistel_elec_ge.ListeDevisFacturesDark"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cistel_elec_ge"
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1600"
+      Title="ListeDevisFacturesDark">
+    <Grid Background="#355E8A">
+        <TextBlock 
+            FontSize="36" 
+            TextAlignment="Center"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Margin="500,87,558,0" 
+            Foreground="#F0F9FF" Width="518" Height="57">Liste des devis/factures</TextBlock>
+        <DataGrid 
+            Name="datagrid" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Height="546" 
+            Width="1150" 
+            Margin="225,234,225,0" 
+            FontSize="18" 
+            FontFamily="Segoe UI" 
+            Background="#F0F9FF" 
+            BorderThickness="2" 
+            MaxHeight="50" 
+            MaxColumnWidth="230" 
+            MinRowHeight="25" 
+            HorizontalScrollBarVisibility="Auto" 
+            VerticalGridLinesBrush="#F0F9FF" 
+            VerticalContentAlignment="Stretch" Foreground="Black">
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Header="Numéro de référence" 
+                    Binding="{Binding referenceNum}" 
+                    Width="250"
+                    />
+                <DataGridTextColumn 
+                    Header="Nom du client" 
+                    Binding="{Binding clientLastName}" 
+                    Width="250"
+                    />
+                <DataGridTextColumn 
+                    Header="Prénom du client" 
+                    Binding="{Binding clientFirstName}" 
+                    Width="250"
+                    />
+                <DataGridTextColumn 
+                    Header="Numéro client" 
+                    Binding="{Binding clientNum}" 
+                    Width="250"
+                    />
+                <DataGridTextColumn 
+                    Header="Voir le document" 
+                    Binding="{Binding doc}" 
+                    Width="250"
+                    />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

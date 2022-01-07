@@ -1,0 +1,16 @@
+﻿<Window x:Class="cistel_elec_ge.MdpOublierDark"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cistel_elec_ge"
+        mc:Ignorable="d"
+        Title="MdpOublierDark" Height="900" Width="1600" Background="#FF355E8A" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Image Height="254" Margin="472,79,470,0" VerticalAlignment="Top" Source="cistel-logo.png"/>
+        <TextBox x:Name="username" HorizontalAlignment="Left" Height="45" Margin="472,489,0,0" TextWrapping="Wrap" Text="pseudo" VerticalAlignment="Top" Width="650" FontSize="30" />
+        <TextBox x:Name="password_text" HorizontalAlignment="Left" Height="45" Margin="472,597,0,0" TextWrapping="Wrap" Text="Dans quelle ville êtes-vous né ?" VerticalAlignment="Top" Width="650" FontSize="30"/>
+        <Button Content="annuler" x:Name="Annuler" HorizontalAlignment="Left" Height="45" Margin="250,730,0,0" VerticalAlignment="Top" Background="#F0F9FF" Width="198" FontSize="22" Click="Annuler_Click"/>
+        <Button Content="valider" x:Name="Valider" HorizontalAlignment="Right" Height="45" Margin="0,730,250,0" VerticalAlignment="Top" Background="#F0F9FF" Width="198" FontSize="22" Click="Valider_Click"/>
+    </Grid>
+</Window>
